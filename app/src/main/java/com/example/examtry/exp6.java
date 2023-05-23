@@ -28,7 +28,7 @@ public class exp6 extends AppCompatActivity {
                 int i = 0;
             while( i < count ){
                 String old = tv.getText().toString();
-                String h = "Hello World   ";
+                String h = "Hello World ";
                 tv.setText(old + h);
                 i++;
             }
