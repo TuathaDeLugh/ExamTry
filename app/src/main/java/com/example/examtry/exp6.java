@@ -2,6 +2,7 @@ package com.example.examtry;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,25 +15,19 @@ public class exp6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Button btn;
         EditText et;
-        TextView tv;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exp6);
         btn = findViewById(R.id.btn);
-        tv = findViewById(R.id.tv);
         et = findViewById(R.id.et);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int count = Integer.parseInt(et.getText().toString());
-                int i = 0;
-            while( i < count ){
-                String old = tv.getText().toString();
-                String h = "Hello World ";
-                tv.setText(old + h);
-                i++;
+                Intent i = new Intent(exp6.this, exp6land.class);
+                String etval = et.getText().toString();
+                i.putExtra("count",etval);
+                startActivity(i);
             }
-            }
-        });
+            });
     }
 }

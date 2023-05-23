@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
+
 public class exp8 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,12 @@ public class exp8 extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         {
             super.onCreateOptionsMenu(menu);
-            MenuItem mnu1 = menu.add(0,0,0,"Red");
-            MenuItem mnu2 = menu.add(0,0,0,"Blue");
-            MenuItem mnu3 = menu.add(0,0,0,"Green");
-return  true;
+            MenuItem mnu1 = menu.add(0,1,0,"Red");
+            MenuItem mnu2 = menu.add(0,2,0,"Blue");
+            MenuItem mnu3 = menu.add(0,3,0,"Green");
+            MenuItem mnu4 = menu.add(0,4,0,"Yellow");
+
+            return  true;
         }
     }
     @Override
@@ -42,6 +46,9 @@ return  true;
                     break;
                 case 3:
                     view.setBackgroundColor(Color.GREEN);
+                    break;
+                case 4:
+                    view.setBackgroundColor(Color.YELLOW);
                     break;
                 default:
                     return super.onOptionsItemSelected(item);
